@@ -1,0 +1,20 @@
+{
+  "name": "image_search",
+  "version": "1.0.0",
+  "description": "service for searching for images ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "image",
+    "search"
+  ],
+  "author": "Nicholas Morrell",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  }
+}

@@ -1,0 +1,24 @@
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css', crossorigin='anonymous')
+  body
+    div.container
+        div.row
+            div.col-md-12
+                h1.text-xs-center Search Results
+                ul 
+                    each val in data 
+                        li.list-group-item
+                            a(href=val.pageUrl)=val.title
+                            p=val.topic
+                            img(src=val.imageUrl, class="img-responsive img-rounded")
+                
+                //    
+                    each val in data
+                        div.col-md-4
+                        div.card
+                            img(class = "card-img-top", src=val.imageUrl, alt ="Card image cap") 
+                            div.card-block 
+                                h4.card-title=val.title
+                            
