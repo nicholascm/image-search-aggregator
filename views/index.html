@@ -1,0 +1,80 @@
+<head> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+         image-search-aggregator
+      </a>
+    </div>
+  </div>
+</nav>
+   <div class = "container"> 
+   <div class = "jumbotron"> 
+     <div class = "row"> 
+        <div class = "col-md-12"> 
+            <div class = "text-center"> 
+                <h1>image-search-aggregator</h1>
+                <p>An </p>
+                <a class = "btn btn-primary" href = "https://github.com/nicholascm90/image-search-aggregator">Check out the code</a>
+            </div>
+        </div>    
+
+    </div>  
+   
+   
+   </div>
+   
+   <h3>Endpoints</h3>
+   
+   <h6>Search</h6>
+   
+    <ol class = "list-group">
+        <li class = "list-group-item">Pass in a single-word search term after the <code>/search/{searchTerm}</code></li> 
+        <li class = "list-group-item">Receive a JSON response of search results with this type: 
+            <code> <br>
+                { <br>
+                    title: "Sample Title", <br>
+                    imageUrl: "url", <br>
+                    pageUrl: "url", <br>
+                    topic: "Sample Topic", <br>
+                    views: "# Views", <br>
+                    posted: "Date Posted" <br>
+                } <br>
+            </code>
+        </li>
+        <li class = "list-group-item">Optional parameters are "max", "offset", and "format." "Format" defaults to JSON. User format returns an HTML page.<br>
+           Sample URL: <code>/search/poodle?max=100&offset=50&format=user</code>
+        </li>
+    </ol>
+    
+    <h6>Recent</h6>
+    
+    <ol class = "list-group">
+        <li class = "list-group-item">Hit the recent searches endpoint <code> /recent </code></li>
+        <li class = "list-group-item">Receive a JSON response of recent searches <br>
+            <code>
+                { <br>
+                    searchTerm: "aSearchTerm" <br>
+                    date: unix <br> 
+                }
+                </code>
+        </li>
+    </ol> 
+    
+
+</div> 
+    
+    
+</body>

@@ -12,8 +12,13 @@ app.set('view engine', 'jade');
 
 app.set('port', (process.env.PORT || 5000));
 
+app.use(express.static(__dirname + '/views')); 
+
+
 app.get('/', (req, res) => {
-    res.send("api for image search..../search/{searchTerm} & recent..../recent"); 
+    
+    //TODO: prettify these instructions with info about using the max, offset, and format.
+    res.sendFile("index.html"); 
 }); 
 
 
